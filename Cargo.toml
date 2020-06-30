@@ -1,0 +1,7 @@
+
+[workspace]
+members = [
+  "sum_finder",
+  "tui"
+]
+
