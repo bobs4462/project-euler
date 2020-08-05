@@ -4,17 +4,11 @@ pub fn run() {
         .parse::<usize>()
         .expect("Failed to parse the input")
         - 1;
-    let mut acc = 2;
-    let mut last_two = (1, 2);
-    let mut t: usize;
-    loop {
-        t = last_two.0 + last_two.1;
-        if t > limit {
-            break;
-        }
-        last_two.0 = last_two.1;
-        last_two.1 = t;
-        acc += t * (!t & 1);
+    let mut acc = 0;
+    let mut last_two = (1, 1);
+    while last_two.0 + last_two.1 < limit {
+        acc += last_two.0 + last_two.1;
+        last_two = (last_two.0 + 2 * last_two.1, 2 * last_two.0 + 3 * last_two.1);
     }
     println!("ANSWER {}", acc);
 }
