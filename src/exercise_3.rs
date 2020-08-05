@@ -1,3 +1,4 @@
+// TODO make an efficient rewrite
 use crate::utils;
 pub fn run() {
     let mut number = utils::input(&"Enter the number number: ") // get's the input from stdin
