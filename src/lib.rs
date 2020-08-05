@@ -7,7 +7,7 @@ pub mod utils {
         std::io::stdin()
             .read_line(&mut ret)
             .expect("Failed to read from stdin");
-        ret
+        ret.trim().to_string()
     }
 }
 
@@ -20,6 +20,7 @@ pub mod exercises {
         pub fn new() -> Self {
             let mut map = HashMap::with_capacity(500);
             map.insert("exercise_1", super::exercise_1::run as fn() -> ());
+            map.insert("exercise_2", super::exercise_2::run as fn() -> ());
             Exercises { map }
         }
         pub fn get(&self, key: &str) -> &fn() -> () {
@@ -29,3 +30,4 @@ pub mod exercises {
 }
 
 mod exercise_1;
+mod exercise_2;
