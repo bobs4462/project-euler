@@ -1,10 +1,9 @@
 use crate::utils;
 pub fn run() {
-    let n_4 = utils::input(&"Enter the first number: ")
-    let n_2 = utils::input(&"Enter the first number: ")
+    let n_1 = utils::input(&"Enter the first number: ")
         .parse::<usize>()
         .unwrap();
-    let n_2 = utils::input(&"Enter the second number: ")
+    let n_2 = utils::input(&"Enter the first number: ")
         .parse::<usize>()
         .unwrap();
     let upper_bound = utils::input(&"Enter the upper bound: ")
