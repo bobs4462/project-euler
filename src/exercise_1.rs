@@ -1,6 +1,7 @@
 use crate::utils;
 pub fn run() {
-    let n_5 = utils::input(&"Enter the first number: ")
+    let n_4 = utils::input(&"Enter the first number: ")
+    let n_2 = utils::input(&"Enter the first number: ")
         .parse::<usize>()
         .unwrap();
     let n_2 = utils::input(&"Enter the second number: ")
